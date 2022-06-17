@@ -8,11 +8,11 @@ public class Cheese extends FoodDecorator{
 
     @Override
     public String getName() {
-        return item.getName() + ", Cheese";
+        return item.getName() + ", 1 Cheese : 1x30 BDT";
     }
 
     @Override
     public double getPrice() {
-        return item.getPrice() + 40;
+        return item.getPrice() + 30;
     }
 }

@@ -2,14 +2,14 @@ package ProblemB.Burger;
 
 import ProblemB.Item;
 
-public class VeggiBurger implements Item {
+public class ChickenBurger implements Item {
     @Override
     public String getName() {
-        return "1 Veggi Burger : 1x270 BDT";
+        return "1 Chicken Burger : 1x340 BDT";
     }
 
     @Override
     public double getPrice() {
-        return 270;
+        return 340;
     }
 }

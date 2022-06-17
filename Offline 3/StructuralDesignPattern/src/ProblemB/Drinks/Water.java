@@ -4,24 +4,21 @@ import ProblemB.FoodDecorator;
 import ProblemB.Item;
 
 public class Water extends FoodDecorator {
-    protected static int waterCount = 0;
+    private int waterCount = 0;
 
-    public Water(Item item) {
+    public Water(Item item, int waterCount) {
         super(item);
-        waterCount++;
+        this.waterCount = waterCount;
     }
 
     @Override
     public String getName() {
-        return item.getName() + ", Water";
+        return item.getName() + ", " + waterCount + " Water : " + waterCount + "x40 BDT";
     }
 
     @Override
     public double getPrice() {
-        return item.getPrice() + 15;
+        return item.getPrice() + (15 * waterCount);
     }
 
-    public int getCount(){
-        return waterCount;
-    }
 }

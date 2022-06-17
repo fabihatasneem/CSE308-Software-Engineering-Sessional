@@ -11,7 +11,7 @@ public class OnionRings extends FoodDecorator {
 
     @Override
     public String getName() {
-        return item.getName() + ", Onion Rings";
+        return item.getName() + ", 1 Onion Rings : 1x150 BDT";
     }
 
     @Override

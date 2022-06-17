@@ -11,7 +11,7 @@ public class FrenchFries extends FoodDecorator {
 
     @Override
     public String getName() {
-        return item.getName() + ", French Fries";
+        return item.getName() + ", 1 French Fries : 1x100 BDT";
     }
 
     @Override

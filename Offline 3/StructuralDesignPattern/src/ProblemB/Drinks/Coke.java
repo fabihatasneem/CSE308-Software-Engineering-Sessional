@@ -4,24 +4,20 @@ import ProblemB.FoodDecorator;
 import ProblemB.Item;
 
 public class Coke extends FoodDecorator {
-    protected static int cokeCount = 0;
+    private int cokeCount = 0;
 
-    public Coke(Item item) {
+    public Coke(Item item, int cokeCount) {
         super(item);
-        cokeCount++;
+        this.cokeCount = cokeCount;
     }
 
     @Override
     public String getName() {
-        return item.getName() + ", Coke";
+        return item.getName() + ", " + cokeCount + " Coke : " + cokeCount + "x40 BDT";
     }
 
     @Override
     public double getPrice() {
-        return item.getPrice() + 30;
-    }
-
-    public int getCount(){
-        return cokeCount;
+        return item.getPrice() + (40 * cokeCount);
     }
 }
