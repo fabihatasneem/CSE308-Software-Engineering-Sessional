@@ -16,6 +16,9 @@ public class SumCalculator implements SumCalculatorInterface {
                 FileAdapter fileAdapter = new FileAdapter("~");
                 fileAdapter.calculateSum(input);
             }
+            else{
+                System.out.println("Input format violated.");
+            }
         }catch(Exception e) {
             System.out.println("Input format violated.");
         }
