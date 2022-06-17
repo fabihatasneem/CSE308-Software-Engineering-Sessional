@@ -12,10 +12,9 @@ public class FileAdapter implements SumCalculatorInterface{
     }
 
     @Override
-    public double calculateSum(String input){
+    public void calculateSum(String input){
         if(separator.equals("~")){
-            return calculator.calculateSumTildeSeparator(input);
+            calculator.calculateSumTildeSeparator(input);
         }
-        return 0;
     }
 }

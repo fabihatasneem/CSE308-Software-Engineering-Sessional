@@ -1,5 +1,5 @@
 package ProblemA;
 
 public interface SumCalculatorInterface {
-    double calculateSum(String input);
+    void calculateSum(String input);
 }

@@ -6,19 +6,18 @@ public class SumCalculator implements SumCalculatorInterface {
     }
 
     @Override
-    public double calculateSum(String input) {
+    public void calculateSum(String input) {
         try{
             if(input.contains(" ")){
                 Sum_SpaceSeparator calculator = new Sum_SpaceSeparator();
-                return calculator.calculateSum(input);
+                calculator.calculateSum(input);
             }
             else if(input.contains("~")){
                 FileAdapter fileAdapter = new FileAdapter("~");
-                return fileAdapter.calculateSum(input);
+                fileAdapter.calculateSum(input);
             }
         }catch(Exception e) {
-            e.printStackTrace();
+            System.out.println("Input format violated.");
         }
-        return 0;
     }
 }
