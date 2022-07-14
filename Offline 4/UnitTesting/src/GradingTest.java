@@ -9,7 +9,12 @@ class GradingTest {
     @Test
     void NegativeNumberInThreeCreditReturnsInvalid(){
         Grading grading = new Grading();
-        assertEquals("Invalid Input", grading.gradeCalculator("-179", 3));
+        assertEquals("Invalid Input", grading.gradeCalculator("-0.5", 3));
+    }
+    @Test
+    void ZeroInThreeCreditReturnsF(){
+        Grading grading = new Grading();
+        assertEquals("F", grading.gradeCalculator("0", 3));
     }
     @Test
     void OneHundredSeventyNineInThreeCreditReturnsF(){
@@ -76,6 +81,11 @@ class GradingTest {
         assertEquals("Invalid Input", grading.gradeCalculator("-9", 4));
     }
     @Test
+    void ZeroInFourCreditReturnsF(){
+        Grading grading = new Grading();
+        assertEquals("F", grading.gradeCalculator("0", 4));
+    }
+    @Test
     void TwoHundredThirtyNineInFourCreditReturnsF(){
         Grading grading = new Grading();
         assertEquals("F", grading.gradeCalculator("239", 4));
@@ -132,10 +142,15 @@ class GradingTest {
     }
 
 
-    //non-number input
+    //Others
     @Test
     void NonNumberInputReturnsInvalid(){
         Grading grading = new Grading();
         assertEquals("Invalid Input", grading.gradeCalculator("Fabiha", 4));
+    }
+    @Test
+    void InvalidCreditInputReturnsInvalid(){
+        Grading grading = new Grading();
+        assertEquals("Invalid Input", grading.gradeCalculator("248", 2));
     }
 }
