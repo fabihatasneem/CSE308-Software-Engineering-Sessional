@@ -31,7 +31,7 @@ public class Grading {
                         return "Invalid Input";
                     }
                 } else {
-                    return "Invalid Input";
+                    return "Invalid Credit";
                 }
             }
         }catch(Exception e) {
